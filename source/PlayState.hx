@@ -2222,6 +2222,15 @@ class PlayState extends MusicBeatState
 
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
+		
+		if (this.curSong == "happy") {
+       switch (this.curBeat)  {
+                case 112:
+                          this.remove(PlayState.dad);
+                          PlayState.dad = new Character(100, 100,  "bipolarmouse");
+                          this.add(PlayState.dad);
+        }
+}
 
 		if (curSong == 'Fresh')
 		{
