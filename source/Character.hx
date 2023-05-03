@@ -246,6 +246,25 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+				
+				case 'sadmouse':
+				tex = Paths.getSparrowAtlas('characters/sadmouse_assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'Sadmouse Idle', 24);
+				animation.addByPrefix('singUP', 'Sadmouse Up', 24);
+				animation.addByPrefix('singRIGHT', 'Sadmouse Right', 24);
+				animation.addByPrefix('singDOWN', 'Sadmouse Down', 24);
+				animation.addByPrefix('singLEFT', 'Sadmouse Left', 24);
+
+				addOffset('idle',-127, -200);
+				addOffset("singUP", -127, -200);
+				addOffset("singRIGHT", -127, -200);
+				addOffset("singLEFT", -127, -200);
+				addOffset("singDOWN", -127, -200);
+				setGraphicSize(Std.int(width * 2));
+				updateHitbox();
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
